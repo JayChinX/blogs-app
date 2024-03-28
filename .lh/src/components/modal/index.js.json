@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/modal/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1711621685943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711621725211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n \n-  \n-  export default function Account(props) {\n-      return (\n-          <div>{props.children}</div>\n-      );\n-    }\n\\ No newline at end of file\n+export default function Account(props) {\n+    return (\n+        <div>{props.children}</div>\n+    );\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1711621685943,
+            "name": "Commit-0",
+            "content": "\n  \n  export default function Account(props) {\n      return (\n          <div>{props.children}</div>\n      );\n    }"
+        }
+    ]
+}

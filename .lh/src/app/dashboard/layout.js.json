@@ -1,0 +1,66 @@
+{
+    "sourceFile": "src/app/dashboard/layout.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1711594028732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711594045774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,12 @@\n+/**\n+ * @typedef {React.ReactNode} NewType\n+ */\n+\n export default function DashboardLayout({\n     children, // will be a page or nested layout\n   }: {\n-    children: React.ReactNode\n+    children: NewType\n   }) {\n     return (\n       <section>\n         {/* Include shared UI here e.g. a header or sidebar */}\n"
+                },
+                {
+                    "date": 1711594068036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,11 @@\n-/**\n- * @typedef {React.ReactNode} NewType\n- */\n+import type { Metadata } from \"next\";\n+import { Inter } from \"next/font/google\";\n \n export default function DashboardLayout({\n     children, // will be a page or nested layout\n   }: {\n-    children: NewType\n+    children: React.ReactNode\n   }) {\n     return (\n       <section>\n         {/* Include shared UI here e.g. a header or sidebar */}\n"
+                },
+                {
+                    "date": 1711594163723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,9 @@\n-import type { Metadata } from \"next\";\n-import { Inter } from \"next/font/google\";\n-\n export default function DashboardLayout({\n     children, // will be a page or nested layout\n-  }: {\n-    children: React.ReactNode\n-  }) {\n+  }: Readonly<{\n+    children: React.ReactNode;\n+  }>) {\n     return (\n       <section>\n         {/* Include shared UI here e.g. a header or sidebar */}\n         <nav></nav>\n"
+                },
+                {
+                    "date": 1711594176231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,4 @@\n         {children}\n       </section>\n     )\n   }\n-  ```\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1711594194511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function DashboardLayout({\n     children, // will be a page or nested layout\n-  }: Readonly<{\n+)}: Readonly<{\n     children: React.ReactNode;\n   }>) {\n     return (\n       <section>\n"
+                },
+                {
+                    "date": 1711594219407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-export default function DashboardLayout({\n-    children, // will be a page or nested layout\n-)}: Readonly<{\n+export default function DashboardLayout(({\n+    children,\n+  }: Readonly<{\n     children: React.ReactNode;\n   }>) {\n     return (\n       <section>\n"
+                },
+                {
+                    "date": 1711594226455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n-export default function DashboardLayout(({\n-    children,\n-  }: Readonly<{\n+export default function DashboardLayout({\n+    children, // will be a page or nested layout\n+}: Readonly<{\n     children: React.ReactNode;\n-  }>) {\n+}>) {\n     return (\n       <section>\n         {/* Include shared UI here e.g. a header or sidebar */}\n         <nav></nav>\n"
+                },
+                {
+                    "date": 1711594294216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export default function DashboardLayout({\n     children, // will be a page or nested layout\n-}: Readonly<{\n-    children: React.ReactNode;\n-}>) {\n+  }: {\n+    children: React.ReactNode\n+  }) {\n     return (\n       <section>\n         {/* Include shared UI here e.g. a header or sidebar */}\n         <nav></nav>\n"
+                },
+                {
+                    "date": 1711594325277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,6 @@\n export default function DashboardLayout({\n     children, // will be a page or nested layout\n-  }: {\n-    children: React.ReactNode\n   }) {\n     return (\n       <section>\n         {/* Include shared UI here e.g. a header or sidebar */}\n"
+                },
+                {
+                    "date": 1711595192197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n   }) {\n     return (\n       <section>\n         {/* Include shared UI here e.g. a header or sidebar */}\n-        <nav></nav>\n+            <nav></nav>\n+            <div>DashboardLayout</div>\n   \n         {children}\n       </section>\n     )\n"
+                },
+                {
+                    "date": 1711595197509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+export default function DashboardLayout({\n+    children, // will be a page or nested layout\n+  }) {\n+    return (\n+      <section>\n+        {/* Include shared UI here e.g. a header or sidebar */}\n+            <nav>DashboardLayout</nav>\n+            <div>DashboardLayout</div>\n+  \n+        {children}\n+      </section>\n+    )\n+  }\n"
+                },
+                {
+                    "date": 1711595208049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,24 +3,9 @@\n   }) {\n     return (\n       <section>\n         {/* Include shared UI here e.g. a header or sidebar */}\n-            <nav>DashboardLayout</nav>\n-            <div>DashboardLayout</div>\n-  \n-        {children}\n-      </section>\n-    )\n-  }\n-export default function DashboardLayout({\n-    children, // will be a page or nested layout\n-  }) {\n-    return (\n-      <section>\n-        {/* Include shared UI here e.g. a header or sidebar */}\n             <nav></nav>\n-            <div>DashboardLayout</div>\n-  \n         {children}\n       </section>\n     )\n   }\n"
+                }
+            ],
+            "date": 1711594028732,
+            "name": "Commit-0",
+            "content": "export default function DashboardLayout({\n    children, // will be a page or nested layout\n  }: {\n    children: React.ReactNode\n  }) {\n    return (\n      <section>\n        {/* Include shared UI here e.g. a header or sidebar */}\n        <nav></nav>\n  \n        {children}\n      </section>\n    )\n  }\n  ```"
+        }
+    ]
+}

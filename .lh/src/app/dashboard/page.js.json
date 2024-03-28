@@ -1,0 +1,74 @@
+{
+    "sourceFile": "src/app/dashboard/page.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1711595098909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711595135741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,5 @@\n export default function Dashboard() {\n-  return (\n-    <Layout>\n-    {/* Note that the template is given a unique key. */}\n-    <Template key={routeParam}>{children}</Template>\n-  </Layout>\n+    return (\n+      <div>dashboard</div>\n     );\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1711595389974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,9 @@\n+\n+export const metadata = {\n+  title: 'Dashboard',\n+}\n+\n export default function Dashboard() {\n     return (\n       <div>dashboard</div>\n     );\n"
+                },
+                {
+                    "date": 1711626205576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,22 @@\n   title: 'Dashboard',\n }\n \n export default function Dashboard() {\n+  const data = await getData();\n     return (\n       <div>dashboard</div>\n     );\n\\ No newline at end of file\n-  }\n+}\n+  \n+async function getData() {\n+  const res = await fetch('https://api.example.com/...')\n+  // The return value is *not* serialized\n+  // You can return Date, Map, Set, etc.\n+\n+  if (!res.ok) {\n+    // This will activate the closest `error.js` Error Boundary\n+    throw new Error('Failed to fetch data')\n+  }\n+\n+  return res.json()\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1711626224913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n export const metadata = {\n   title: 'Dashboard',\n }\n \n-export default function Dashboard() {\n+export default async function Dashboard() {\n   const data = await getData();\n     return (\n       <div>dashboard</div>\n     );\n"
+                },
+                {
+                    "date": 1711626384896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     );\n }\n   \n async function getData() {\n-  const res = await fetch('https://api.example.com/...')\n+  const res = await fetch('http://localhost:3000/api')\n   // The return value is *not* serialized\n   // You can return Date, Map, Set, etc.\n \n   if (!res.ok) {\n"
+                },
+                {
+                    "date": 1711626475784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,11 @@\n     );\n }\n   \n async function getData() {\n-  const res = await fetch('http://localhost:3000/api')\n+  const res = await fetch('http://localhost:3000/api', {\n+    method: \"GET\"\n+  })\n   // The return value is *not* serialized\n   // You can return Date, Map, Set, etc.\n \n   if (!res.ok) {\n"
+                },
+                {
+                    "date": 1711626570666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \n export default async function Dashboard() {\n   const data = await getData();\n     return (\n-      <div>dashboard</div>\n+      <div>dashboard {data}</div>\n     );\n }\n   \n async function getData() {\n"
+                },
+                {
+                    "date": 1711626608459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \n export default async function Dashboard() {\n   const data = await getData();\n     return (\n-      <div>dashboard {data}</div>\n+      <div>dashboard {data.title}</div>\n     );\n }\n   \n async function getData() {\n"
+                },
+                {
+                    "date": 1711626966809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     );\n }\n   \n async function getData() {\n-  const res = await fetch('http://localhost:3000/api', {\n+  const res = await fetch('http://localhost:3000/api/route', {\n     method: \"GET\"\n   })\n   // The return value is *not* serialized\n   // You can return Date, Map, Set, etc.\n"
+                },
+                {
+                    "date": 1711627014686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     );\n }\n   \n async function getData() {\n-  const res = await fetch('http://localhost:3000/api/route', {\n+  const res = await fetch('http://localhost:3000/api', {\n     method: \"GET\"\n   })\n   // The return value is *not* serialized\n   // You can return Date, Map, Set, etc.\n"
+                },
+                {
+                    "date": 1711627037705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \n export default async function Dashboard() {\n   const data = await getData();\n     return (\n-      <div>dashboard {data.title}</div>\n+      <div>dashboard {data.data.title}</div>\n     );\n }\n   \n async function getData() {\n"
+                },
+                {
+                    "date": 1711627099641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n }\n \n export default async function Dashboard() {\n   const data = await getData();\n+  console.log(data);\n     return (\n       <div>dashboard {data.data.title}</div>\n     );\n }\n"
+                },
+                {
+                    "date": 1711627128740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,13 @@\n \n export default async function Dashboard() {\n   const data = await getData();\n   console.log(data);\n-    return (\n-      <div>dashboard {data.data.title}</div>\n-    );\n+  return (\n+    <div>dashboard {data.data.title}</div>\n+  );\n }\n-  \n+\n async function getData() {\n   const res = await fetch('http://localhost:3000/api', {\n     method: \"GET\"\n   })\n"
+                },
+                {
+                    "date": 1711627296342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,9 @@\n   );\n }\n \n async function getData() {\n-  const res = await fetch('http://localhost:3000/api', {\n-    method: \"GET\"\n-  })\n+  const res = await fetch('http://localhost:3000/api')\n   // The return value is *not* serialized\n   // You can return Date, Map, Set, etc.\n \n   if (!res.ok) {\n"
+                }
+            ],
+            "date": 1711595098909,
+            "name": "Commit-0",
+            "content": "export default function Dashboard() {\n  return (\n    <Layout>\n    {/* Note that the template is given a unique key. */}\n    <Template key={routeParam}>{children}</Template>\n  </Layout>\n    );\n  }"
+        }
+    ]
+}

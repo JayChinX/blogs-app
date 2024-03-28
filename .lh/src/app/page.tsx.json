@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1711590798136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711595587969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,11 @@\n import Image from \"next/image\";\n+import Link from \"next/link\";\n \n export default function Home() {\n   return (\n-    <div>Welcome to Next.js!</div>\n+    <div>Welcome to Next.js!\n+      <Link href=\"/dashboard\">Dashboard</Link>\n+    </div>\n+    \n   );\n }\n"
+                },
+                {
+                    "date": 1711612915728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n export default function Home() {\n   return (\n     <div>Welcome to Next.js!\n       <Link href=\"/dashboard\">Dashboard</Link>\n+      <Link href=\"/blog\">Dashboard</Link>\n     </div>\n     \n   );\n }\n"
+                }
+            ],
+            "date": 1711590798136,
+            "name": "Commit-0",
+            "content": "import Image from \"next/image\";\n\nexport default function Home() {\n  return (\n    <div>Welcome to Next.js!</div>\n  );\n}\n"
+        }
+    ]
+}

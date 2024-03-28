@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/dashboard/layout.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1711619846313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1711619846313,
+            "name": "Commit-0",
+            "content": "export default function DashboardLayout({\n    children: React.Node, // will be a page or nested layout\n}) {\n    return (\n        <section>\n            {/* Include shared UI here e.g. a header or sidebar */}\n            <nav></nav>\n            {children}\n        </section>\n    )\n}\n"
+        }
+    ]
+}

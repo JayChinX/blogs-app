@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/@auth/login/page.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1711621305312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711621709936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Modal } from 'components/modal'\n+import { Modal } from '@/components/modal'\n \n export default function Login() {\n   return (\n     <Modal>\n"
+                }
+            ],
+            "date": 1711621305312,
+            "name": "Commit-0",
+            "content": "import { Modal } from 'components/modal'\n\nexport default function Login() {\n  return (\n    <Modal>\n      <h1>Login</h1>\n      {/* ... */}\n    </Modal>\n  )\n}"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/dashboard/layout.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1711619882104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711619973288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export default function DashboardLayout({\n-    children: React.ReactNode, // will be a page or nested layout\n+    children: {children: React.ReactNode}, // will be a page or nested layout\n }) {\n     return (\n         <section>\n             {/* Include shared UI here e.g. a header or sidebar */}\n"
+                },
+                {
+                    "date": 1711620002608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function DashboardLayout({\n-    children: {children: React.ReactNode}, // will be a page or nested layout\n-}) {\n+    children, // will be a page or nested layout\n+}: {children: React.ReactNode}) {\n     return (\n         <section>\n             {/* Include shared UI here e.g. a header or sidebar */}\n             <nav></nav>\n"
+                },
+                {
+                    "date": 1711620023554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function DashboardLayout({\n     children, // will be a page or nested layout\n-}: {children: React.ReactNode}) {\n+}: { children: React.ReactNode }) {\n     return (\n         <section>\n             {/* Include shared UI here e.g. a header or sidebar */}\n             <nav></nav>\n"
+                }
+            ],
+            "date": 1711619882104,
+            "name": "Commit-0",
+            "content": "export default function DashboardLayout({\n    children: React.ReactNode, // will be a page or nested layout\n}) {\n    return (\n        <section>\n            {/* Include shared UI here e.g. a header or sidebar */}\n            <nav></nav>\n            {children}\n        </section>\n    )\n}\n"
+        }
+    ]
+}

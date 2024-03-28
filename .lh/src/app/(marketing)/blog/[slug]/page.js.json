@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/app/(marketing)/blog/[slug]/page.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1711598116631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711598132178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-export default function Page({ params }) {\n+export default function BlogDetail({ params }) {\n     return <div>My Post: {params.slug}</div>\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1711598150317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,8 @@\n+\n+export const metadata = {\n+    title: 'BlogDetail',\n+  }\n+\n export default function BlogDetail({ params }) {\n     return <div>My Post: {params.slug}</div>\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1711613276705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n \n-export const metadata = {\n-    title: 'BlogDetail',\n+export async function generateMetadata({ params }) {\n+    return {\n+      title: '...',\n+    }\n   }\n \n export default function BlogDetail({ params }) {\n     return <div>My Post: {params.slug}</div>\n"
+                },
+                {
+                    "date": 1711613296148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \n export async function generateMetadata({ params }) {\n     return {\n-      title: '...',\n+      title: params.slug,\n     }\n   }\n \n export default function BlogDetail({ params }) {\n"
+                }
+            ],
+            "date": 1711598116631,
+            "name": "Commit-0",
+            "content": "export default function Page({ params }) {\n    return <div>My Post: {params.slug}</div>\n  }"
+        }
+    ]
+}
