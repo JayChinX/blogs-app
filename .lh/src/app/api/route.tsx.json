@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 7,
             "patches": [
                 {
                     "date": 1711624581217,
@@ -24,6 +24,18 @@
                 {
                     "date": 1711626679007,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,22 +9,9 @@\n     // })\n     // const data = await res.json()\n \n     const data = {\n-        title: \"\"\n+        title: \"123\"\n     }\n   \n     return Response.json({ data })\n-  }\n-export const dynamic = 'force-dynamic' // defaults to force-static\n-export async function GET(request: Request) {\n-    const res = await fetch('https://data.mongodb-api.com/...', {\n-      headers: {\n-            'Content-Type': 'application/json',\n-          \n-        // 'API-Key': process.env.DATA_API_KEY,\n-      },\n-    })\n-    const data = await res.json()\n-  \n-    return Response.json({ data })\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1711637987089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n export const dynamic = 'force-dynamic' // defaults to force-static\n export async function GET(request: Request) {\n-    // const res = await fetch('https://data.mongodb-api.com/...', {\n-    //   headers: {\n-    //         'Content-Type': 'application/json',\n+    const res = await fetch('https://data.mongodb-api.com/...', {\n+      headers: {\n+            'Content-Type': 'application/json',\n           \n-    //     // 'API-Key': process.env.DATA_API_KEY,\n-    //   },\n-    // })\n-    // const data = await res.json()\n+        // 'API-Key': process.env.DATA_API_KEY,\n+      },\n+    })\n+    const data = await res.json()\n \n     const data = {\n         title: \"123\"\n     }\n"
+                },
+                {
+                    "date": 1711637992639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,15 @@\n     const res = await fetch('https://data.mongodb-api.com/...', {\n       headers: {\n             'Content-Type': 'application/json',\n           \n-        // 'API-Key': process.env.DATA_API_KEY,\n+        'API-Key': process.env.DATA_API_KEY,\n       },\n     })\n     const data = await res.json()\n \n-    const data = {\n-        title: \"123\"\n-    }\n+    // const data = {\n+    //     title: \"123\"\n+    // }\n   \n     return Response.json({ data })\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1711638002154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,16 @@\n export const dynamic = 'force-dynamic' // defaults to force-static\n export async function GET(request: Request) {\n     const res = await fetch('https://data.mongodb-api.com/...', {\n-      headers: {\n+        headers: {\n             'Content-Type': 'application/json',\n-          \n-        'API-Key': process.env.DATA_API_KEY,\n-      },\n+            'API-Key': process.env.DATA_API_KEY,\n+        },\n     })\n     const data = await res.json()\n \n     // const data = {\n     //     title: \"123\"\n     // }\n\\ No newline at end of file\n-  \n+\n     return Response.json({ data })\n-  }\n+}\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1711624581217,
